@@ -1,0 +1,12 @@
+{
+  "html": {
+    "snippets": {
+      "hid": "\t<details>\n\t<summary>click to see the answer</summary>\n\t${child}|\n\t</details>\n"
+    }
+  },
+  "markdown": {
+    "snippets": {
+      "plant": "```plantuml ${NAME}\n@startuml\n${0}\n@unduml\n```"
+    }
+  }
+}
