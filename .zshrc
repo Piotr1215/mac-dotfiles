@@ -219,8 +219,9 @@ function vhalt {
 }
 
 function fixgit() {
+     email=$1
     git filter-branch --env-filter 'if [ "$GIT_AUTHOR_EMAIL" = "decoder@live.de" ]; then
-     GIT_AUTHOR_EMAIL=p.zaniewski@comforte.com;
+     GIT_AUTHOR_EMAIL=$email;
      GIT_AUTHOR_NAME="Piotr Zaniewski";
      GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL;
      GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"; fi' -- --all
