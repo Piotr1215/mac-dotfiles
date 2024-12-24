@@ -16,6 +16,33 @@ export ZSH="/Users/piotr/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# Global aliases
+alias -g C='| sed -r "s/\x1b\[[0-9;]*m//g" | pbcopy'
+alias -g G='| grep -i --color=always'
+alias -g H=' --help'
+alias -g L='| less'
+alias -g NUL="> /dev/null 2>&1"
+alias -g R="2>&1 | tee output.txt"
+alias -g T="| tail -n +2"
+alias -g V=' --version'
+alias -g W='| nvim -c "setlocal buftype=nofile bufhidden=wipe" -c "nnoremap <buffer> q :q!<CR>" -'
+
+# Directories and files
+alias la='/usr/bin/ls'
+alias ls='exa --color=always --long --all --header --icons'
+alias lsa='exa --color=always --long --all --sort=age --reverse --header --icons'
+alias lsf='fd --max-depth=1 --type=file'
+alias tr2='tree -LC 2 --si --sort name | less'
+
+## Kubernetes aliases
+alias kconf='__create_separate_kubeconfig.sh'
+alias kdump='kubectl get all --all-namespaces'
+alias kaf='kubectl apply -f'
+alias kdf='kubectl delete -f'
+
+# Command shadow
+alias lg='lazygit'
+alias sr='omz reload'
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
