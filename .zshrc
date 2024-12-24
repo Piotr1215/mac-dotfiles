@@ -4,12 +4,12 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
+unset ZSH_AUTOSUGGEST_USE_ASYNC
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/p.zaniewski/.oh-my-zsh"
+export ZSH="/Users/piotr/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -170,7 +170,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/scripts:$PATH
 export EDITOR='nvim'
 export XDG_CONFIG_HOME=~/.config
-export DEMODIR="/Users/p.zaniewski/dev/crossplane-demo"
+export DEMODIR="/Users/piotr/dev/crossplane-demo"
 export GOPATH=$HOME/go/
 export GH_USERNAME=piotr1215
 
@@ -234,11 +234,10 @@ function prev() {
 
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
-source /Users/p.zaniewski/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-alias dconf='/usr/bin/git --git-dir=/Users/p.zaniewski/.dotfiles/ --work-tree=/Users/p.zaniewski'
+alias dconf='/usr/bin/git --git-dir=/Users/piotr/.dotfiles/ --work-tree=/Users/piotr'
 
 # Created by `pipx` on 2021-09-16 13:37:28
-export PATH="$PATH:/Users/p.zaniewski/Library/Python/3.9/bin"
+export PATH="$PATH:/Users/piotr/Library/Python/3.9/bin"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -249,3 +248,4 @@ export NVM_DIR="$HOME/.nvm"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
