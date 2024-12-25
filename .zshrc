@@ -43,7 +43,6 @@ alias kdf='kubectl delete -f'
 # Command shadow
 alias lg='lazygit'
 alias sr='omz reload'
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -140,6 +139,7 @@ plugins=(git kubectl zsh-autosuggestions zsh-syntax-highlighting sudo web-search
 autoload -U compinit && compinit
 
 # source $HOME/kube-ps1/kube-ps1.sh
+zstyle ':omz:lib:theme-and-appearance' aliases no
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -156,7 +156,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-source ~/.aliases
+# source ~/.aliases
 
 # ALIASES
 #alias cl='clear'
