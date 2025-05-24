@@ -105,7 +105,7 @@ alias sr='omz reload'
 # Add wisely, as too many plugins slow down shell startup.
 
 source $ZSH/oh-my-zsh.sh
-
+source ~/.aliases
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -276,3 +276,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(direnv hook zsh)"
